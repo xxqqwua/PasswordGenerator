@@ -11,20 +11,32 @@ def upper_n_lower_register_characters(length, register):
 
     if register == "uppercase":
         uppercases_characters = []
+
         create_characters(length, "ABCDEFGHIJKLMNOPQRSTUVWXYZ", uppercases_characters)
         return uppercases_characters
 
     elif register == "lowercase":
         lower_characters = []
+
         create_characters(length, "abcdefghijklmnopqrstuvwxyz", lower_characters)
         return lower_characters
 
 
 # Numbers in password
 def numbers(length):
-    pass
+    password_characters = []
+
+    while len(password_characters) < length:
+        number = random.randint(0, 9)
+        password_characters.append(number)
+    return password_characters
 
 
 # Symbols in password
 def symbols(length):
-    pass
+    password_symbols = []
+
+    while len(password_symbols) < length:
+        symbol = random.choice("!@#$%^&*()_+-=[]{}|;:,.<>/?")
+        password_symbols.append(symbol)
+    return password_symbols

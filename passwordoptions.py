@@ -1,11 +1,15 @@
+import random
+
 # Uppercase characters in password
 def uppercase():
-    pass
+    letter = random.choice("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+    return letter
 
 
 # Lowercase characters in password
 def lowercase():
-    pass
+    letter = random.choice("abcdefghijklmnopqrstuvwxyz")
+    return letter
 
 
 # Numbers in password

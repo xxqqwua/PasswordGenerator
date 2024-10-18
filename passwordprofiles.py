@@ -71,3 +71,18 @@ def custom(length):
 
     pyperclip.copy(password)
     print(password)
+
+
+def ios_style():
+    part1 = ''.join(upper_n_lower_register_characters(6, "lowercase"))
+    part2 = ''.join(upper_n_lower_register_characters(6, "lowercase"))
+
+    part3 = ''.join(upper_n_lower_register_characters(2, "lowercase"))
+    part3 += str(numbers(1)[0])
+    part3 += upper_n_lower_register_characters(1, "uppercase")[0]
+    part3 += ''.join(upper_n_lower_register_characters(2, "lowercase"))
+
+    password = f"{part1}-{part2}-{part3}"
+
+    pyperclip.copy(password)
+    print(password)
